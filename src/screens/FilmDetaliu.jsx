@@ -38,7 +38,7 @@ export default function FilmDetaliu({ film, onBack, favorite, toggleFavorit }) {
           className={`btn-favorit-card ${esteInFavorite ? 'salvat' : ''}`}
           onClick={() => toggleFavorit(film.id)}
         >
-          <img src="/src/heart.svg" alt="" className="heart-icon-btn" />
+          <img src="/heart.svg" alt="" className="heart-icon-btn" />
           {esteInFavorite ? 'Salvat' : 'Adaugă la favorite'}
         </button>
 

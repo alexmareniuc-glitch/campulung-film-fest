@@ -68,7 +68,7 @@ export default function Program({ favorite, toggleFavorit }) {
 
       <div className="hero-banner">
         <div className="hero-negru">
-          <img src="/src/logo_cff.svg" alt="CFF" className="hero-logo" />
+          <img src="/logo_cff.svg" alt="CFF" className="hero-logo" />
           <p className="hero-data">13–16 August 2026 · Câmpulung Moldovenesc</p>
         </div>
       </div>
@@ -159,9 +159,9 @@ export default function Program({ favorite, toggleFavorit }) {
                 {proiectiiVizibile(film).map((p, i) => (
                   <div key={i} className="proiectie-row">
                     <span className="proiectie-data">{p.zi}, {p.data}</span>
-                    <img src="/src/Vector.svg" className="proiectie-separator" alt="" />
+                    <img src="/Vector.svg" className="proiectie-separator" alt="" />
                     <span className="proiectie-ora">{p.ora}</span>
-                    <img src="/src/Vector.svg" className="proiectie-separator" alt="" />
+                    <img src="/Vector.svg" className="proiectie-separator" alt="" />
                     <span className="proiectie-locatie">{p.locatie}</span>
                   </div>
                 ))}
@@ -170,7 +170,7 @@ export default function Program({ favorite, toggleFavorit }) {
                 className={`btn-favorit-card ${favorite.includes(film.id) ? 'salvat' : ''}`}
                 onClick={() => toggleFavorit(film.id)}
               >
-                <img src="/src/heart.svg" alt="" className="heart-icon-btn" />
+                <img src="/heart.svg" alt="" className="heart-icon-btn" />
                 {favorite.includes(film.id) ? 'Salvat' : 'Adaugă la favorite'}
               </button>
             </div>

@@ -40,7 +40,7 @@ export default function Login({ onLogin }) {
       <div className="login-box">
 
         <div className="login-logo-wrapper">
-          <img src="/src/logo_cff.svg" alt="CFF" className="login-logo" />
+          <img src="/logo_cff.svg" alt="CFF" className="login-logo" />
         </div>
 
         <h1 className="login-titlu">

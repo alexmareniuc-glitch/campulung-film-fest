@@ -12,7 +12,7 @@ export default function Info() {
 
         <div className="info-rand">
           <div className="info-poza-wrapper">
-            <img src="/src/0D4A9431.jpg" alt="CFF" className="info-poza" />
+            <img src="/0D4A9431.jpg" alt="CFF" className="info-poza" />
           </div>
           <div className="info-sectiune">
             <h2 className="info-sectiune-titlu">Despre Festival</h2>
@@ -23,7 +23,7 @@ export default function Info() {
 
         <div className="info-rand reverse">
           <div className="info-poza-wrapper">
-            <img src="/src/0S1A2200.jpg" alt="Cinema Melodia" className="info-poza" />
+            <img src="/0S1A2200.jpg" alt="Cinema Melodia" className="info-poza" />
           </div>
           <div className="info-sectiune">
             <h2 className="info-sectiune-titlu">Locații</h2>
@@ -50,7 +50,7 @@ export default function Info() {
 
         <div className="info-rand">
           <div className="info-poza-wrapper">
-            <img src="/src/0D4A8361.jpg" alt="Program" className="info-poza" />
+            <img src="/0D4A8361.jpg" alt="Program" className="info-poza" />
           </div>
           <div className="info-sectiune">
             <h2 className="info-sectiune-titlu">Program</h2>
@@ -77,7 +77,7 @@ export default function Info() {
 
         <div className="info-rand reverse">
           <div className="info-poza-wrapper">
-            <img src="/src/0S1A9254.JPG" alt="Contact" className="info-poza" />
+            <img src="/0S1A9254.JPG" alt="Contact" className="info-poza" />
           </div>
           <div className="info-sectiune">
             <h2 className="info-sectiune-titlu">Contact</h2>

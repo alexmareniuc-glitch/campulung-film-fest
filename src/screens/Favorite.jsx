@@ -40,7 +40,7 @@ export default function Favorite({ favorite, toggleFavorit }) {
     return (
       <div className="screen">
         <div className="empty-state">
-          <img src="/src/heart.svg" alt="" className="empty-heart-icon" />
+          <img src="/heart.svg" alt="" className="empty-heart-icon" />
           <h3>Niciun film salvat</h3>
           <p>Apasă Adaugă la favorite pe un film din Program.</p>
         </div>
@@ -70,7 +70,7 @@ export default function Favorite({ favorite, toggleFavorit }) {
       {filmeFiltrate.length === 0 ? (
         <div className="screen">
           <div className="empty-state">
-            <img src="/src/heart.svg" alt="" className="empty-heart-icon" />
+            <img src="/heart.svg" alt="" className="empty-heart-icon" />
             <h3>Niciun film în această zi</h3>
             <p>Nu ai filme favorite în {zile.find(z => z.id === ziActiva)?.label}.</p>
           </div>
@@ -92,9 +92,9 @@ export default function Favorite({ favorite, toggleFavorit }) {
                   {proiectiiVizibile(film).map((p, i) => (
                     <div key={i} className="proiectie-row">
                       <span className="proiectie-data">{p.zi}, {p.data}</span>
-                      <img src="/src/Vector.svg" className="proiectie-separator" alt="" />
+                      <img src="/Vector.svg" className="proiectie-separator" alt="" />
                       <span className="proiectie-ora">{p.ora}</span>
-                      <img src="/src/Vector.svg" className="proiectie-separator" alt="" />
+                      <img src="/Vector.svg" className="proiectie-separator" alt="" />
                       <span className="proiectie-locatie">{p.locatie}</span>
                     </div>
                   ))}
@@ -103,7 +103,7 @@ export default function Favorite({ favorite, toggleFavorit }) {
                   className="btn-favorit-card salvat"
                   onClick={() => toggleFavorit(film.id)}
                 >
-                  <img src="/src/heart.svg" alt="" className="heart-icon-btn" />
+                  <img src="/heart.svg" alt="" className="heart-icon-btn" />
                   Salvat
                 </button>
               </div>

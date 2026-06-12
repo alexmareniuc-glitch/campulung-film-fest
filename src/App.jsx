@@ -51,7 +51,7 @@ useEffect(() => {
   if (loadingAuth) {
     return (
       <div className="loading-screen">
-        <img src="/src/logo_cff.svg" alt="CFF" className="loading-logo" />
+        <img src="/logo_cff.svg" alt="CFF" className="loading-logo" />
       </div>
     )
   }
@@ -79,12 +79,12 @@ useEffect(() => {
 
       <nav className="bottom-nav">
         <button className={ecranActiv === 'program' ? 'activ' : ''} onClick={() => setEcranActiv('program')}>
-          <img src="/src/Vector-1.svg" className="nav-svg" alt="" />
+          <img src="/Vector-1.svg" className="nav-svg" alt="" />
           <span>Program</span>
         </button>
         <button className={ecranActiv === 'favorite' ? 'activ' : ''} onClick={() => setEcranActiv('favorite')}>
           <div className="nav-heart-wrapper">
-            <img src="/src/heart.svg" className="nav-svg nav-heart-svg" alt="" />
+            <img src="/heart.svg" className="nav-svg nav-heart-svg" alt="" />
             {favorite.length > 0 && (
               <span className="nav-counter">{favorite.length}</span>
             )}
@@ -92,11 +92,11 @@ useEffect(() => {
           <span>Favorite</span>
         </button>
         <button className={ecranActiv === 'voteaza' ? 'activ' : ''} onClick={() => setEcranActiv('voteaza')}>
-          <img src="/src/Vector-3.svg" className="nav-svg" alt="" />
+          <img src="/Vector-3.svg" className="nav-svg" alt="" />
           <span>Votează</span>
         </button>
         <button className={ecranActiv === 'info' ? 'activ' : ''} onClick={() => setEcranActiv('info')}>
-          <img src="/src/Vector-2.svg" className="nav-svg" alt="" />
+          <img src="/Vector-2.svg" className="nav-svg" alt="" />
           <span>Info</span>
         </button>
       </nav>

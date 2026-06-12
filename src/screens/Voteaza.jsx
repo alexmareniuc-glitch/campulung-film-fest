@@ -169,7 +169,7 @@ export default function Voteaza({ user }) {
       {/* Status vot */}
       {votSeaara ? (
         <div className="vot-confirmat">
-          <img src="/src/Vector-3.svg" alt="" className="vot-confirmat-icon" />
+          <img src="/Vector-3.svg" alt="" className="vot-confirmat-icon" />
           <h2 className="vot-confirmat-titlu">Vot înregistrat!</h2>
           <p className="vot-confirmat-text">Ai votat pentru</p>
           <p className="vot-confirmat-film">
@@ -179,7 +179,7 @@ export default function Voteaza({ user }) {
         </div>
       ) : viitoare ? (
         <div className="vot-status">
-          <img src="/src/Vector-3.svg" alt="" className="vot-status-icon" />
+          <img src="/Vector-3.svg" alt="" className="vot-status-icon" />
           <p className="vot-status-titlu">Votul nu a început încă</p>
           <p className="vot-status-text">Votul pentru {searaSelectata.label} se deschide pe {searaSelectata.data} la ora 21:45.</p>
         </div>
@@ -223,7 +223,7 @@ export default function Voteaza({ user }) {
               onClick={() => handleConfirmare(seraraActiva)}
               disabled={!selectatCurent || !!trimitere}
             >
-              <img src="/src/Vector-3.svg" alt="" className="vot-btn-icon" />
+              <img src="/Vector-3.svg" alt="" className="vot-btn-icon" />
               {trimitere === seraraActiva ? 'Se trimite...' : 'Confirmă votul'}
             </button>
             {!selectatCurent && <p className="vot-hint">Selectează un film pentru a vota</p>}
