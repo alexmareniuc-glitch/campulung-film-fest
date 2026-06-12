@@ -59,3 +59,43 @@ body {
   font-family: 'Nimbus Sans', sans-serif;
   font-weight: 400;
 }
+@font-face {
+  font-family: 'Integral CF';
+  src: url('/Integral CF.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Nimbus Sans';
+  src: url('/NimbusSanL-Reg.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nimbus Sans';
+  src: url('/NimbusSanL-RegIta.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nimbus Sans';
+  src: url('/NimbusSanL-Bol.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nimbus Sans';
+  src: url('/NimbusSanL-BolIta.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nimbus Sans';
+  src: url('/nimbussansdot-ultrligh.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
