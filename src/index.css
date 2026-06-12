@@ -1,40 +1,40 @@
 @font-face {
   font-family: 'Integral CF';
-  src: url('./fonts/Integral_CF.ttf') format('truetype');
+  src: url('/Integral_CF.ttf') format('truetype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Nimbus Sans';
-  src: url('./fonts/NimbusSanL-Reg.otf') format('opentype');
+  src: url('/NimbusSanL-Reg.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nimbus Sans';
-  src: url('./fonts/NimbusSanL-RegIta.otf') format('opentype');
+  src: url('/NimbusSanL-RegIta.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Nimbus Sans';
-  src: url('./fonts/NimbusSanL-Bol.otf') format('opentype');
+  src: url('/NimbusSanL-Bol.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nimbus Sans';
-  src: url('./fonts/NimbusSanL-BolIta.otf') format('opentype');
+  src: url('/NimbusSanL-BolIta.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Nimbus Sans';
-  src: url('./fonts/nimbussansdot-ultrligh.otf') format('opentype');
+  src: url('/nimbussansdot-ultrligh.otf') format('opentype');
   font-weight: 200;
   font-style: normal;
 }
