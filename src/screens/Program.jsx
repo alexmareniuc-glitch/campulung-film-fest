@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { filme } from '../data'
 import FilmDetaliu from './FilmDetaliu'
 
@@ -19,6 +19,40 @@ export default function Program({ favorite, toggleFavorit }) {
   const [filtruSectiune, setFiltruSectiune] = useState('Toate')
   const [filtreDeschise, setFiltreDeschise] = useState(false)
   const [filmSelectat, setFilmSelectat] = useState(null)
+  const filtrePanelRef = useRef(null)
+  const filtreToggleRef = useRef(null)
+
+  // Închide filtrele când dai click în afară
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        filtrePanelRef.current &&
+        !filtrePanelRef.current.contains(e.target) &&
+        filtreToggleRef.current &&
+        !filtreToggleRef.current.contains(e.target)
+      ) {
+        setFiltreDeschise(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('touchstart', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
+  }, [])
+
+  // Browser back button + swipe
+  useEffect(() => {
+    if (filmSelectat) {
+      window.history.pushState({ film: true }, '')
+    }
+    const handlePop = () => {
+      if (filmSelectat) setFilmSelectat(null)
+    }
+    window.addEventListener('popstate', handlePop)
+    return () => window.removeEventListener('popstate', handlePop)
+  }, [filmSelectat])
 
   const filmeDupaZi = useMemo(() =>
     filme.filter(f => ziActiva === 0 || f.proiectii.some(p => p.ziId === ziActiva)),
@@ -56,7 +90,10 @@ export default function Program({ favorite, toggleFavorit }) {
     return (
       <FilmDetaliu
         film={filmSelectat}
-        onBack={() => setFilmSelectat(null)}
+        onBack={() => {
+          setFilmSelectat(null)
+          window.history.back()
+        }}
         favorite={favorite}
         toggleFavorit={toggleFavorit}
       />
@@ -85,6 +122,7 @@ export default function Program({ favorite, toggleFavorit }) {
         </div>
         <div className="filtre-rand-mobil">
           <button
+            ref={filtreToggleRef}
             className={`filtru-toggle-btn ${filtreDeschise ? 'deschis' : ''} ${nrFiltre > 0 ? 'are-filtre' : ''}`}
             onClick={() => setFiltreDeschise(!filtreDeschise)}
           >
@@ -98,7 +136,7 @@ export default function Program({ favorite, toggleFavorit }) {
       </div>
 
       {filtreDeschise && (
-        <div className="filtre-panel">
+        <div className="filtre-panel" ref={filtrePanelRef}>
           <div className="filtre-panel-header">
             <span className="filtre-panel-titlu">Filtrează filmele</span>
             {activeFiltre && (

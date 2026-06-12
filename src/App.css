@@ -1235,3 +1235,10 @@ body {
   border-color: var(--auriu);
   color: var(--floral-white);
 }
+.filtru-btn.activ {
+  background: var(--auriu) !important;
+  color: var(--negru) !important;
+  border-color: var(--auriu) !important;
+  font-weight: 700;
+  -webkit-tap-highlight-color: transparent;
+}
