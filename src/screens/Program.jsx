@@ -136,11 +136,6 @@ export default function Program({ favorite, toggleFavorit }) {
 
       <div className="rezultate-header">
         <span>{filmeFiltrate.length} {filmeFiltrate.length === 1 ? 'film' : 'filme'}</span>
-        {activeFiltre && (
-          <button className="reset-filtre-inline" onClick={() => { setFiltruTara('Toate'); setFiltruSectiune('Toate') }}>
-            Resetează ×
-          </button>
-        )}
       </div>
 
       <div className="filme-lista">
