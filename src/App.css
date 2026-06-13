@@ -1292,3 +1292,32 @@ body {
   50% { opacity: 0.4; transform: scale(0.92); }
   100% { opacity: 1; transform: scale(1); }
 }
+.login-forgot {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 12px;
+  font-family: 'Nimbus Sans', sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.15s;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.login-forgot:hover { color: var(--auriu); }
+
+.login-reset-confirmat {
+  background: rgba(201,151,0,0.08);
+  border: 1px solid rgba(201,151,0,0.2);
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+}
+
+.login-reset-confirmat strong { color: var(--floral-white); }
