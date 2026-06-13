@@ -34,6 +34,12 @@ export default function App() {
     return unsub
   }, [])
 
+  useEffect(() => {
+    const handler = () => setShowPrivacy(true)
+    window.addEventListener('showPrivacy', handler)
+    return () => window.removeEventListener('showPrivacy', handler)
+  }, [])
+
   const toggleFavorit = async (id) => {
     const nou = favorite.includes(id)
       ? favorite.filter(x => x !== id)
@@ -45,11 +51,11 @@ export default function App() {
   }
 
   if (loadingAuth) {
-return (
-  <div className="loading-screen">
-    <img src="/Vector-2.svg" alt="CFF" className="loading-logo page-loading-logo" />
-  </div>
-)
+    return (
+      <div className="loading-screen">
+        <img src="/Vector-2.svg" alt="CFF" className="loading-logo page-loading-logo" />
+      </div>
+    )
   }
 
   if (showPrivacy) {
@@ -69,7 +75,6 @@ return (
 
   return (
     <div className="app">
-
       <div className="top-bar">
         <img src="/logo_cff.svg" alt="CFF" className="top-bar-logo" />
         <button className="logout-btn" onClick={() => signOut(auth)}>
