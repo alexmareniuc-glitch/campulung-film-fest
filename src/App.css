@@ -991,3 +991,32 @@
   .privacy-continut { padding: 40px; }
   .top-bar { padding: 0 40px; }
 }
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+[data-theme="light"] {
+  --negru: #ffffff;
+  --negru-soft: #f4f4f4;
+  --floral-white: #1a1a1a;
+  --auriu: #b8900a;
+}
+
+[data-theme="dark"] {
+  --negru: #1a1a1a;
+  --negru-soft: #242424;
+  --floral-white: #fafaf7;
+  --auriu: #C9A84C;
+}

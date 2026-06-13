@@ -16,6 +16,14 @@ export default function App() {
   const [user, setUser] = useState(null)
   const [loadingAuth, setLoadingAuth] = useState(true)
   const [showPrivacy, setShowPrivacy] = useState(false)
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('cff-theme') !== 'light'
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light')
+    localStorage.setItem('cff-theme', darkMode ? 'dark' : 'light')
+  }, [darkMode])
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (u) => {
@@ -77,15 +85,22 @@ export default function App() {
     <div className="app">
       <div className="top-bar">
         <img src="/logo_cff.svg" alt="CFF" className="top-bar-logo" />
-        <button className="logout-btn" onClick={() => signOut(auth)}>
-          Ieși din cont
-        </button>
+        <div className="top-bar-right">
+          <button
+            className="theme-toggle"
+            onClick={() => setDarkMode(d => !d)}
+            aria-label="Toggle dark/light mode"
+          >
+            {darkMode ? '☀️' : '🌙'}
+          </button>
+          <button className="logout-btn" onClick={() => signOut(auth)}>
+            Ieși din cont
+          </button>
+        </div>
       </div>
-
       <main className="content">
         {ecrane[ecranActiv]}
       </main>
-
       <nav className="bottom-nav">
         <button className={ecranActiv === 'program' ? 'activ' : ''} onClick={() => setEcranActiv('program')}>
           <img src="/Vector-1.svg" className="nav-svg" alt="" />
