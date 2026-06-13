@@ -11,9 +11,9 @@ const SERI = [
   {
     id: 1,
     label: 'Seara 1',
-    data: '14 August',
-    start: new Date('2026-08-14T21:45:00'),
-    end: new Date('2026-08-15T01:00:00'),
+    data: '13 Iunie',
+    start: new Date('2026-06-13T00:00:00'),
+    end: new Date('2026-06-14T01:00:00'),
     filme: [
       { id: 's1_1', titlu: 'Scurtmetraj 1', regizor: 'Regizor A', tara: 'România', durata: '12 min', descriere: 'Descriere scurtmetraj 1.', imagine: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800&q=80' },
       { id: 's1_2', titlu: 'Scurtmetraj 2', regizor: 'Regizor B', tara: 'Moldova', durata: '15 min', descriere: 'Descriere scurtmetraj 2.', imagine: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80' },
@@ -30,9 +30,9 @@ const SERI = [
   {
     id: 2,
     label: 'Seara 2',
-    data: '15 August',
-    start: new Date('2026-08-15T21:45:00'),
-    end: new Date('2026-08-16T01:00:00'),
+    data: '14 Iunie',
+    start: new Date('2026-06-14T00:00:00'),
+    end: new Date('2026-06-15T01:00:00'),
     filme: [
       { id: 's2_1', titlu: 'Scurtmetraj 11', regizor: 'Regizor K', tara: 'România', durata: '17 min', descriere: 'Descriere scurtmetraj 11.', imagine: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800&q=80' },
       { id: 's2_2', titlu: 'Scurtmetraj 12', regizor: 'Regizor L', tara: 'Moldova', durata: '20 min', descriere: 'Descriere scurtmetraj 12.', imagine: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80' },
@@ -127,9 +127,9 @@ export default function Voteaza({ user }) {
           <p className="vot-eyebrow">CFF 11 · 2026</p>
           <h1 className="vot-titlu">Buzduganul de Aur</h1>
         </div>
-       <div className="page-loading">
-  <img src="/logo_cff.svg" alt="" className="page-loading-logo" />
-</div>
+        <div className="page-loading">
+          <img src="/logo_cff.svg" alt="" className="page-loading-logo" />
+        </div>
       </div>
     )
   }
@@ -151,7 +151,6 @@ export default function Voteaza({ user }) {
         <p className="vot-subtitlu">Votează cel mai bun scurtmetraj al fiecărei seri. Un vot per seară, deschis între 21:45 și 01:00.</p>
       </div>
 
-      {/* Tabs seri */}
       <div className="vot-seri-tabs">
         {SERI.map(s => (
           <button
@@ -162,13 +161,12 @@ export default function Voteaza({ user }) {
             {s.label}
             <span className="vot-seara-data">{s.data}</span>
             {esteActiva(s) && <span className="vot-seara-badge">Deschis</span>}
-            {viitoare && s.id === seraraActiva && <span className="vot-seara-badge inactiv">În curând</span>}
+            {esteViitoare(s) && <span className="vot-seara-badge inactiv">În curând</span>}
             {(s.id === 1 ? votSeara1 : votSeara2) && <span className="vot-seara-badge votat">Votat ✓</span>}
           </button>
         ))}
       </div>
 
-      {/* Status vot */}
       {votSeaara ? (
         <div className="vot-confirmat">
           <img src="/Vector-3.svg" alt="" className="vot-confirmat-icon" />
@@ -200,7 +198,7 @@ export default function Voteaza({ user }) {
                 onClick={() => setSelectatCurent(film.id)}
               >
                 <div className="vot-card-imagine">
-                  <img src={film.imagine} alt={film.titlu} className="vot-imagine" />
+                  <img src={film.imagine} alt={film.titlu} className="vot-imagine" loading="lazy" />
                   <div className="vot-radio">
                     {selectatCurent === film.id && <div className="vot-radio-activ" />}
                   </div>

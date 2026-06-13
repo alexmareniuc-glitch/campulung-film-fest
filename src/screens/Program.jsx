@@ -4,10 +4,10 @@ import FilmDetaliu from './FilmDetaliu'
 
 const zile = [
   { id: 0, label: 'Toate' },
-  { id: 1, label: 'Joi 13 August' },
-  { id: 2, label: 'Vineri 14 August' },
-  { id: 3, label: 'Sâmbătă 15 August' },
-  { id: 4, label: 'Duminică 16 August' },
+  { id: 1, label: 'Joi 13 Iunie' },
+  { id: 2, label: 'Vineri 14 Iunie' },
+  { id: 3, label: 'Sâmbătă 15 Iunie' },
+  { id: 4, label: 'Duminică 16 Iunie' },
 ]
 
 const toateTarile = ['Toate', 'SUA', 'Germania', 'Islanda', 'România']

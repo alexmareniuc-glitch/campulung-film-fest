@@ -12,8 +12,8 @@ export const filme = [
     imagine: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80',
     imagineFull: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1600&q=80',
     proiectii: [
-      { zi: 'Joi', data: '13 Aug', ora: '18:00', locatie: 'Cinema Melodia', ziId: 1 },
-      { zi: 'Sâm', data: '15 Aug', ora: '21:00', locatie: 'Piața Centrală', ziId: 3 },
+      { zi: 'Joi', data: '13 Iun', ora: '18:00', locatie: 'Cinema Melodia', ziId: 1 },
+      { zi: 'Sâm', data: '15 Iun', ora: '21:00', locatie: 'Piața Centrală', ziId: 3 },
     ],
   },
   {
@@ -25,12 +25,12 @@ export const filme = [
     durata: '153 min',
     gen: 'Sci-Fi',
     sectiune: 'Focus Portugalia',
-    descriere: 'În viitorul îndepărtat, orașul Metropolis este împărțit între elita care trăiește în zgârie-nori luxoși și muncitorii care susțin mașinăria din subteran. O capodoperă a cinematografiei expresioniste germane.',
+    descriere: 'În viitorul îndepărtat, orașul Metropolis este împărțit între elita care trăiește în zgârie-nori luxoși și muncitorii care susțin mașinăria din subteran.',
     imagine: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80',
     imagineFull: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1600&q=80',
     proiectii: [
-      { zi: 'Joi', data: '13 Aug', ora: '20:30', locatie: 'Cinema Melodia', ziId: 1 },
-      { zi: 'Dum', data: '16 Aug', ora: '19:00', locatie: 'Cinema Melodia', ziId: 4 },
+      { zi: 'Joi', data: '13 Iun', ora: '20:30', locatie: 'Cinema Melodia', ziId: 1 },
+      { zi: 'Dum', data: '16 Iun', ora: '19:00', locatie: 'Cinema Melodia', ziId: 4 },
     ],
   },
   {
@@ -42,12 +42,12 @@ export const filme = [
     durata: '118 min',
     gen: 'Dramă',
     sectiune: 'Focus Brazilia',
-    descriere: 'Un bărbat se întoarce în satul natal din Islanda după mulți ani și se confruntă cu amintiri dureroase și relații neterminate. Un film despre identitate, apartenență și reconciliere.',
+    descriere: 'Un bărbat se întoarce în satul natal din Islanda după mulți ani și se confruntă cu amintiri dureroase și relații neterminate.',
     imagine: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80',
     imagineFull: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1600&q=80',
     proiectii: [
-      { zi: 'Vin', data: '14 Aug', ora: '19:00', locatie: 'Piața Centrală', ziId: 2 },
-      { zi: 'Sâm', data: '15 Aug', ora: '17:00', locatie: 'Cinema Melodia', ziId: 3 },
+      { zi: 'Vin', data: '14 Iun', ora: '19:00', locatie: 'Piața Centrală', ziId: 2 },
+      { zi: 'Sâm', data: '15 Iun', ora: '17:00', locatie: 'Cinema Melodia', ziId: 3 },
     ],
   },
   {
@@ -59,12 +59,12 @@ export const filme = [
     durata: '110 min',
     gen: 'Comedie dramatică',
     sectiune: 'Românești',
-    descriere: 'România, 31 decembrie 1989. Într-un bloc comunist din București, mai multe familii se pregătesc să sărbătorească Anul Nou, fără să știe că revoluția tocmai a schimbat totul.',
+    descriere: 'România, 31 decembrie 1989. Într-un bloc comunist din București, mai multe familii se pregătesc să sărbătorească Anul Nou.',
     imagine: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
     imagineFull: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80',
     proiectii: [
-      { zi: 'Vin', data: '14 Aug', ora: '21:00', locatie: 'Cinema Melodia', ziId: 2 },
-      { zi: 'Dum', data: '16 Aug', ora: '21:00', locatie: 'Cinema Melodia', ziId: 4 },
+      { zi: 'Vin', data: '14 Iun', ora: '21:00', locatie: 'Cinema Melodia', ziId: 2 },
+      { zi: 'Dum', data: '16 Iun', ora: '21:00', locatie: 'Cinema Melodia', ziId: 4 },
     ],
   },
   {
@@ -76,12 +76,12 @@ export const filme = [
     durata: '76 min',
     gen: 'Horror expresionist',
     sectiune: 'Buzduganul de Aur',
-    descriere: 'Un tânăr povestește cum un doctor ambulant misterios și somnambulul său comit o serie de crime înfiorătoare. Unul dintre primele filme horror din istoria cinematografiei.',
+    descriere: 'Un tânăr povestește cum un doctor ambulant misterios și somnambulul său comit o serie de crime înfiorătoare.',
     imagine: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800&q=80',
     imagineFull: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=1600&q=80',
     proiectii: [
-      { zi: 'Sâm', data: '15 Aug', ora: '20:00', locatie: 'Piața Centrală', ziId: 3 },
-      { zi: 'Dum', data: '16 Aug', ora: '17:00', locatie: 'Cinema Melodia', ziId: 4 },
+      { zi: 'Sâm', data: '15 Iun', ora: '20:00', locatie: 'Piața Centrală', ziId: 3 },
+      { zi: 'Dum', data: '16 Iun', ora: '17:00', locatie: 'Cinema Melodia', ziId: 4 },
     ],
   },
 ]
