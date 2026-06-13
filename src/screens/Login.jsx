@@ -77,11 +77,9 @@ export default function Login({ onLogin, onPrivacy }) {
 
         {resetTrimis ? (
           <div className="login-reset-confirmat">
-            <p>✓ Email trimis la <strong>{email}</strong></p>
-            <p>Verifică inbox-ul și urmează instrucțiunile.</p>
-            <button className="login-switch" onClick={() => { setMod('login'); setResetTrimis(false) }}>
-              Înapoi la login
-            </button>
+  <p>✓ Email trimis la <strong>{email}</strong></p>
+  <p>Verifică inbox-ul și urmează instrucțiunile.</p>
+  <p style={{color: '#666', fontSize: '12px'}}>Dacă nu găsești emailul, verifică folderul Spam.</p>
           </div>
         ) : (
           <>
