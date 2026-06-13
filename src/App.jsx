@@ -15,8 +15,11 @@ export default function App() {
   const [favorite, setFavorite] = useState([])
   const [user, setUser] = useState(null)
   const [loadingAuth, setLoadingAuth] = useState(true)
-  const [showPrivacy, setShowPrivacy] = useState(false)
+const [darkMode, setDarkMode] = useState(true)
 
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light')
+  }, [darkMode])
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (u) => {
       setUser(u)
@@ -71,11 +74,16 @@ return (
     <div className="app">
 
       <div className="top-bar">
-        <img src="/logo_cff.svg" alt="CFF" className="top-bar-logo" />
-        <button className="logout-btn" onClick={() => signOut(auth)}>
-          Ieși din cont
-        </button>
-      </div>
+  <img src="/logo_cff.svg" alt="CFF" className="top-bar-logo" />
+  <div className="top-bar-right">
+    <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)} title="Schimbă tema">
+      {darkMode ? '☀️' : '🌙'}
+    </button>
+    <button className="logout-btn" onClick={() => signOut(auth)}>
+      Ieși din cont
+    </button>
+  </div>
+</div>
 
       <main className="content">
         {ecrane[ecranActiv]}

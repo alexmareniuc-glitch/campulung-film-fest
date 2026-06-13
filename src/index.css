@@ -1,66 +1,5 @@
 @font-face {
   font-family: 'Integral CF';
-  src: url('/Integral_CF.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Nimbus Sans';
-  src: url('/NimbusSanL-Reg.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nimbus Sans';
-  src: url('/NimbusSanL-RegIta.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nimbus Sans';
-  src: url('/NimbusSanL-Bol.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nimbus Sans';
-  src: url('/NimbusSanL-BolIta.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nimbus Sans';
-  src: url('/nimbussansdot-ultrligh.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --auriu: #c99700;
-  --negru: #141414;
-  --negru-soft: #232222;
-  --alb: #ffffff;
-  --floral-white: #fcfbf2;
-}
-
-body {
-  background: var(--negru);
-  color: var(--floral-white);
-  font-family: 'Nimbus Sans', sans-serif;
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Integral CF';
   src: url('/Integral CF.ttf') format('truetype');
   font-weight: normal;
 }
@@ -98,4 +37,53 @@ body {
   src: url('/nimbussansdot-ultrligh.otf') format('opentype');
   font-weight: 200;
   font-style: normal;
+}
+
+:root {
+  --auriu: #c99700;
+  --auriu-soft: rgba(201, 151, 0, 0.12);
+  --auriu-border: rgba(201, 151, 0, 0.3);
+
+  --bg: #fcfbf2;
+  --bg-secondary: #f5f3e8;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf9f2;
+
+  --text-primary: #141414;
+  --text-secondary: #555550;
+  --text-tertiary: #999990;
+
+  --border: rgba(0,0,0,0.08);
+  --border-strong: rgba(0,0,0,0.14);
+
+  --nav-bg: rgba(252,251,242,0.95);
+  --top-bar-bg: rgba(252,251,242,0.95);
+}
+
+[data-theme="dark"] {
+  --bg: #141414;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #1e1e1e;
+  --bg-card-hover: #242424;
+
+  --text-primary: #fcfbf2;
+  --text-secondary: #999990;
+  --text-tertiary: #555550;
+
+  --border: rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.12);
+
+  --nav-bg: rgba(20,20,20,0.97);
+  --top-bar-bg: rgba(20,20,20,0.97);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Nimbus Sans', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
 }
