@@ -47,7 +47,7 @@ export default function App() {
   if (loadingAuth) {
 return (
   <div className="loading-screen">
-    <img src="/logo_cff.svg" alt="CFF" className="loading-logo page-loading-logo" />
+    <img src="/Vector-2.svg" alt="CFF" className="loading-logo page-loading-logo" />
   </div>
 )
   }

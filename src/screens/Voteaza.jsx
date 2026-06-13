@@ -127,9 +127,9 @@ export default function Voteaza({ user }) {
           <p className="vot-eyebrow">CFF 11 · 2026</p>
           <h1 className="vot-titlu">Buzduganul de Aur</h1>
         </div>
-        <div className="page-loading">
-          <img src="/logo_cff.svg" alt="" className="page-loading-logo" />
-        </div>
+       <div className="page-loading">
+  <img src="/Vector-2.svg" alt="" className="page-loading-logo" />
+</div>
       </div>
     )
   }
